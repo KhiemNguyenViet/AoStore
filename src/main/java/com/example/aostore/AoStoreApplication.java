@@ -8,7 +8,6 @@ public class AoStoreApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AoStoreApplication.class, args);
-        System.out.println("hello,git!");
     }
 
 }
