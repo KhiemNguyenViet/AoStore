@@ -7,254 +7,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="css/home.css">
     <!-- Custom CSS -->
-    <style>
-        /* Category */
-        .header-category{
-            width: 50px;
-            margin-right: 20px;
-            position: relative;
-        }
-
-        .header-category-icon {
-            display: block;
-            font-size: 30px;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        .header-category:hover .header-category-list {
-            display: block;
-        }
-
-        .header-category-list{
-            position: absolute;
-            width: 200px;
-            top: 63px;
-            padding-left: 0;
-            left: -14px;
-            list-style: none;
-            border-radius: 2px;
-            background-color: #fff;
-            box-shadow: 0 1px 2px #666464;
-            z-index: 10;
-            animation: fadeIn ease-in 0.2s;
-            display: none;
-        }
-
-        .header-category-list::before {
-            position: absolute;
-            content: "";
-            border-color: transparent;
-            border-style: solid;
-            border-width: 13px 100px;
-            top: -24px;
-            right: 0px;
-        }
-
-        .header-category-item > a{
-            text-decoration: none;
-        }
-
-        .header-category-link:hover {
-            background-color: #ededed;
-            color: #000;
-        }
-
-        .header-category-link{
-            display: block;
-            color: #000;
-            font-size: 14px;
-            padding: 8px 16px;
-            font-weight: 400;
-            text-transform: none;
-        }
-
-
-
-
-        .nav-item .nav-item-icon{
-            font-size: 30px;
-            margin-left: 20px;
-            line-height: 30px;
-
-        }
-
-        .input-group-search {
-            border-radius: 20px;
-            position: relative;
-        }
-
-        .input-group-search-icon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-
-        .nav-item-user {
-            position: relative;
-        }
-
-        .nav-item-user:hover .nav-item-user-menu{
-            display: block;
-            cursor: pointer;
-        }
-        .nav-item-user-menu {
-            position: absolute;
-            width: 200px;
-            top: 63px;
-            padding-left: 0;
-            right: -30px;
-            list-style: none;
-            border-radius: 2px;
-            background-color: #fff;
-            box-shadow: 0 1px 2px #666464;
-            z-index: 10;
-            animation: fadeIn ease-in 0.2s;
-            display: none;
-        }
-
-        .nav-item-user-menu::before {
-            position: absolute;
-            content: "";
-            border-color: transparent;
-            border-style: solid;
-            border-width: 13px 100px;
-            top: -24px;
-            right: 0px;
-        }
-
-        .nav-item-user-item > a{
-            text-decoration: none;
-        }
-
-        .nav-item-user-link {
-            display: block;
-            text-decoration: none;
-            color: #000;
-            font-size: 14px;
-            padding: 8px 16px;
-            font-weight: 400;
-            text-transform: none;
-        }
-
-        .nav-item-user-link:hover {
-            background-color: #f2f2f2;
-            color: #000;
-        }
-
-        /* Cart */
-        .nav-item-cart{
-            position: relative;
-        }
-
-        .nav-item-cart:hover .nav-item-cart-list{
-            display: block;
-        }
-
-        .nav-item-cart-list {
-            position: absolute;
-            text-align: center;
-            top: 63px;
-            right: 0;
-            background-color: #fff;
-            width: 300px;
-            height: 160px;
-            border-radius: 2px;
-            z-index: 1;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-            animation: fadeIn ease-in 0.2s;
-            display: none;
-        }
-
-        .nav-item-cart-list::before {
-            position: absolute;
-            content: "";
-            border-color: transparent;
-            border-style: solid;
-            border-width: 13px 100px;
-            top: -24px;
-            right: 0px;
-        }
-
-
-        .nav-item-cart-img {
-            margin-top: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
-        .nav-item-cart-msg {
-            font-size: 1.4rem;
-            margin-top: 15px;
-            color: #000;
-        }
-
-
-        .navbar-brand img {
-            height: 50px;
-        }
-
-        .product-card{
-            border: none;
-
-        }
-
-        .cart-img-top{
-            position: relative;
-
-        }
-
-        .cart-img-top:hover {
-            background-color: #000;
-        }
-
-        .cart-buy {
-            position: absolute;
-            width: 120px;
-            height: 40px;
-            top: 210px;
-            right: 70px;
-            background-color: #fff;
-            color: #000;
-            border: none;
-            display: none;
-            animation: fadeIn ease-in 0.2s;
-        }
-
-        .cart-buy:hover {
-            background-color: #C4BAA2;
-            color: #fff;
-            border: none;
-        }
-
-        .cart-btn-img:hover {
-            cursor: pointer;
-        }
-
-        .cart-btn-img:hover .cart-buy {
-            display: block;
-        }
-        .carousel-item img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-        }
-        .product-card img {
-            width: 100%;
-            height: auto;
-        }
-        .card-title{
-            color: #8a8a8f;
-            text-transform: uppercase;
-        }
-
-        .card-text {
-            font-size: 20px;
-            font-weight: 600;
-        }
-    </style>
 </head>
 <body>
 
@@ -265,7 +19,7 @@
 
         <ul class="header-category-list">
             <li class="header-category-item">
-                <a href="" class="header-category-link">Hàng mới</a>
+                <a href="store.jsp" class="header-category-link">Cửa hàng</a>
             </li>
             <li class="header-category-item">
                 <a href="" class="header-category-link">Áo</a>
@@ -280,11 +34,11 @@
                 <a href="" class="header-category-link">Giá Tốt</a>
             </li>
             <li class="header-category-item">
-                <a href="" class="header-category-link">Cửa hàng</a>
+                <a href="" class="header-category-link">Hàng mới</a>
             </li>
         </ul>
     </div>
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="home.jsp">
         <img style="height: 40px;" src="https://owen.cdn.vccloud.vn/static/version1724551346/frontend/Owen/owen2021/vi_VN/images/logo.svg" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -316,9 +70,9 @@
                     <li class="nav-item-user-item">
                         <a href="" class="nav-item-user-link">Danh sách yêu thích</a></li>
                     <li class="nav-item-user-item">
-                        <a href="" class="nav-item-user-link">Đăng Nhập</a></li>
+                        <a href="/login.jsp" class="nav-item-user-link">Đăng Nhập</a></li>
                     <li class="nav-item-user-item nav-item-user-separate">
-                        <a href="" class="nav-item-user-link">Tạo Tài Khoản</a></li>
+                        <a href="/signup.jsp" class="nav-item-user-link">Tạo Tài Khoản</a></li>
                 </ul>
             </li>
             <li class="nav-item nav-item-cart">
@@ -398,7 +152,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000"> <!-- Thêm data-interval để tự động chuyển ảnh -->
+                <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" data-interval="3000"> <!-- Thêm data-interval để tự động chuyển ảnh -->
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -441,7 +195,7 @@
                             <div class="card product-card">
                                 <div class="cart-btn-img">
                                     <img src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/01755127bd64f5dde3182fd2f139143a/z/5/z5467222538110_09daf3473eaa4ccf41d399ac8048bf17.jpg" class="card-img-top" alt="Product 1">
-                                    <a href="#" class="cart-buy btn btn-primary">Mua ngay</a>
+                                    <a href="product_detail.jsp" class="cart-buy btn btn-primary">Mua ngay</a>
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title">Sản phẩm 1</h6>
@@ -454,7 +208,7 @@
                             <div class="card product-card">
                                 <div class="cart-btn-img">
                                     <img src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/01755127bd64f5dde3182fd2f139143a/z/5/z5467222538110_09daf3473eaa4ccf41d399ac8048bf17.jpg" class="card-img-top" alt="Product 1">
-                                    <a href="#" class="cart-buy btn btn-primary">Mua ngay</a>
+                                    <a href="product_detail.jsp" class="cart-buy btn btn-primary">Mua ngay</a>
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title">Sản phẩm 2</h6>
@@ -468,7 +222,7 @@
                             <div class="card product-card">
                                 <div class="cart-btn-img">
                                     <img src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/01755127bd64f5dde3182fd2f139143a/z/5/z5467222538110_09daf3473eaa4ccf41d399ac8048bf17.jpg" class="card-img-top" alt="Product 1">
-                                    <a href="#" class="cart-buy btn btn-primary">Mua ngay</a>
+                                    <a href="product_detail.jsp" class="cart-buy btn btn-primary">Mua ngay</a>
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title">Sản phẩm 3</h6>
@@ -481,7 +235,7 @@
                             <div class="card product-card">
                                 <div class="cart-btn-img">
                                     <img src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/01755127bd64f5dde3182fd2f139143a/z/5/z5467222538110_09daf3473eaa4ccf41d399ac8048bf17.jpg" class="card-img-top" alt="Product 1">
-                                    <a href="#" class="cart-buy btn btn-primary">Mua ngay</a>
+                                    <a href="product_detail.jsp" class="cart-buy btn btn-primary">Mua ngay</a>
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title">Sản phẩm 4</h6>
@@ -500,7 +254,7 @@
                             <div class="card product-card">
                                 <div class="cart-btn-img">
                                     <img src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/01755127bd64f5dde3182fd2f139143a/z/5/z5467222538110_09daf3473eaa4ccf41d399ac8048bf17.jpg" class="card-img-top" alt="Product 1">
-                                    <a href="#" class="cart-buy btn btn-primary">Mua ngay</a>
+                                    <a href="product_detail.jsp" class="cart-buy btn btn-primary">Mua ngay</a>
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title">Sản phẩm 5</h6>
@@ -514,7 +268,7 @@
                             <div class="card product-card">
                                 <div class="cart-btn-img">
                                     <img src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/01755127bd64f5dde3182fd2f139143a/z/5/z5467222538110_09daf3473eaa4ccf41d399ac8048bf17.jpg" class="card-img-top" alt="Product 1">
-                                    <a href="#" class="cart-buy btn btn-primary">Mua ngay</a>
+                                    <a href="product_detail.jsp" class="cart-buy btn btn-primary">Mua ngay</a>
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title">Sản phẩm 6</h6>
@@ -528,7 +282,7 @@
                             <div class="card product-card">
                                 <div class="cart-btn-img">
                                     <img src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/01755127bd64f5dde3182fd2f139143a/z/5/z5467222538110_09daf3473eaa4ccf41d399ac8048bf17.jpg" class="card-img-top" alt="Product 1">
-                                    <a href="#" class="cart-buy btn btn-primary">Mua ngay</a>
+                                    <a href="product_detail.jsp" class="cart-buy btn btn-primary">Mua ngay</a>
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title">Sản phẩm 7</h6>
@@ -542,7 +296,7 @@
                             <div class="card product-card">
                                 <div class="cart-btn-img">
                                     <img src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/01755127bd64f5dde3182fd2f139143a/z/5/z5467222538110_09daf3473eaa4ccf41d399ac8048bf17.jpg" class="card-img-top" alt="Product 1">
-                                    <a href="#" class="cart-buy btn btn-primary">Mua ngay</a>
+                                    <a href="product_detail.jsp" class="cart-buy btn btn-primary">Mua ngay</a>
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title">Sản phẩm 8</h6>
@@ -562,8 +316,141 @@
 </div>
 
 <!-- Footer -->
-<footer class="bg-light text-center py-4 mt-5">
-    <p>© 2024 Owen Style Website. All rights reserved.</p>
+<footer class="footer">
+    <div class="container footer__content">
+        <div class="row">
+            <div class="col-md-5">
+                <img style="margin-bottom: 20px;" src="https://owen.cdn.vccloud.vn/static/version1724551346/frontend/Owen/owen2021/vi_VN/images/logo-footer.svg" alt="" class="">
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <label  class="footer-item-text">
+                            <strong>
+                                CÔNG TY CỔ PHẦN THỜI TRANG KOWIL VIỆT NAM
+                                <br>
+                                Hotline: 1900 8079
+                                <br>
+                                8:30 - 19:00 tất cả các ngày trong tuần.
+
+                            </strong>
+                        </label>
+                    </li>
+
+                    <li class="footer-item">
+                        <label  class="footer-item-text">
+                            <strong>VP Phía Bắc:</strong>
+                            48 Phố Tố Hữu, Trung Văn, Nam Từ Liêm, Hà Nội.
+
+                        </label>
+                    </li>
+                    <label  class="footer-item-text">
+                        <li class="footer-item">
+                            <strong>VP Phía Nam:</strong>
+                            186A Nam Kỳ Khởi Nghĩa, Phường Võ Thị Sáu, Quận 3, TP.HCM
+
+                        </li>
+                    </label>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h3 class="footer__heading">Giới thiệu Owen</h3>
+
+                <ul class="footer-list">
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">Giới thiệu</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">Blog</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">Hệ thống cửa hàng</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">Liên hệ với Owen</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">Chính sách bảo mật</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="col-md-2">
+                <h3 class="footer__heading">Hỗ trợ khách hàng</h3>
+                <ul class="footer-list">
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">Hỏi đáp</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">Chính sách vận chuyển</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">Hướng dẫn chọn kích cỡ</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">Hướng dẫn thanh toán</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">Quy định đổi hàng</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h3 class="footer__heading">Hỗ trợ</h3>
+                <ul class="footer-list footer-netword">
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">
+                            <i class="footer-item__icon fa-brands fa-facebook"></i></a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">
+                            <i class="footer-item__icon fa-brands fa-instagram"></i></a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link">
+                            <i class="footer-item__icon fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+
+
+                <h3 class="footer__heading">Phương thức thanh toán</h3>
+
+                <ul class="footer-list">
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link"><img src="	https://owen.cdn.vccloud.vn/static/version1724551346/frontend/Owen/owen2021/vi_VN/images/pay.png" alt=""></a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="" class="footer-item__link"><img src="https://owen.cdn.vccloud.vn/static/version1724551346/frontend/Owen/owen2021/vi_VN/images/vertify.png" alt=""></a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="grid wide">
+            <p class="footer__text">2024 - Bản quền thuộc về công ty tao là Long</p>
+        </div>
+    </div>
 </footer>
 
 <!-- Bootstrap JS and dependencies -->
